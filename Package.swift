@@ -16,7 +16,7 @@ let package = Package(
         .package(
 			name: "SendbirdChatSDK",
             url: "https://github.com/pedrolopessh/sendbird-chat-sdk-ios-appcenter",
-			.branch("main")
+			.branch("master")
         ),
     ],
     targets: [
