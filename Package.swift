@@ -22,7 +22,7 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SendbirdUIKit",
-			path: "./Sources/SendbirdUIKit.xcframework"
+            path: "Framework/SendbirdUIKit.xcframework"
         ),
         .target(
             name: "SendbirdUIKitTarget",
@@ -30,7 +30,8 @@ let package = Package(
                 .target(name: "SendbirdUIKit"),
                 .product(name: "SendbirdChatSDK", package: "SendbirdChatSDK")
             ],
-            path: "Sources"
+            path: "Framework/Dependency",
+            exclude: ["../../Sources"]
         ),
     ]
 )
