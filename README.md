@@ -14,6 +14,10 @@ With the official release of the v3 version, the name of the `master` branch was
 * v3: `main`
 * v2: `main-v2`
 
+> __NOTE__: If you encounter a checksum problem when adding or resetting a package, please remove the spm cache from the terminal and add it again.
+```
+rm -rf ~/Library/Caches/org.swift.swiftpm/repositories/sendbird-uikit-ios*    
+```
 
 ## Table of contents
 
@@ -60,7 +64,7 @@ The minimum requirements for Sendbird UIKit for iOS are:
 
 - iOS 11+
 - Swift 5.0+
-- Sendbird Chat SDK for iOS 4.1.6+
+- Sendbird Chat SDK for iOS 4.2.2+
 
 <br />
 
@@ -86,7 +90,7 @@ You can get started by creating a project. Sendbird UIKit support `Swift`, so yo
 
 UIKit for iOS can be installed through either [`CocoaPods`](https://cocoapods.org/), [`Carthage`](https://github.com/Carthage/Carthage) or [`Swift Package Manager`](https://swift.org/package-manager/): 
 
-> Note: Sendbird UIKit for iOS is Sendbird Chat SDK-dependent. The minimum requirement of the Chat SDK for iOS is 4.1.6 or higher.
+> Note: Sendbird UIKit for iOS is Sendbird Chat SDK-dependent. The minimum requirement of the Chat SDK for iOS is 4.2.2 or higher.
 
 
 #### - Swift Packages
