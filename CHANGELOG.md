@@ -1,5 +1,83 @@
 # Changelog
 
+### v3.5.6 (Apr 26, 2023) with Chat SDK **v4.6.7** 
+* Update iOS deployment target to 11.0 for Xcode 14.1+
+* Modified access level to the public of `SBUChannelTitleView` class and properties.
+* Improved pending message update logic in thread message list
+
+### v3.5.5 (Apr 19, 2023)
+* Improved stability
+
+### v3.5.4 (Apr 14, 2023) with Chat SDK **v4.6.6**
+* Separated `quotedMessageBackgroundColor` as `quotedMessageLeftBackgroundColor` and `quotedMessageRightBackgroundColor` in `SBUMessageCellTheme`
+  * Deprecated `quotedMessageBackgroundColor` in `SBUMessageCellTheme`
+  * Added `quotedMessageLeftBackgroundColor` and `quotedMessageRightBackgroundColor` in `SBUMessageCellTheme`
+* Modified access level to the public of `SBUCommonItem` properties.
+* Supported multi-line title of channel cell
+* Improved stability
+
+### v3.5.3 (Mar 31, 2023)
+* Modified voice message maximum recording time from 1 min to 10 min
+* Improved stability
+
+### v3.5.2 (Mar 24, 2023)
+* Added `SBUCommonViewControllerSet`
+  * Added `FileViewController` to `SBUCommonViewControllerSet`
+  * Renamed `SBUFileViewer` to `SBUFileViewController`
+* Added new static properties in `SBUGlobals`
+  * Added `isTintColorEnabledForCustomizedIcon` and `isCustomizedIconResizable`
+* Improved stability
+
+### v3.5.1 (Mar 17, 2023)
+* Improved stability
+
+### v3.5.0 (Mar 14, 2023) with Chat SDK **v4.6.0**
+* Added Support for Notification Channels
+  * `SBUFeedNotificationChannelViewController` and `SBUFeedNotificationChannelModule` (`Header`, `List`) added
+  * `SBUChatNotificationChannelViewController` and `SBUChatNotificationChannelModule` (`Header`, `List`) added
+  
+### v3.4.0 (Mar 6, 2023) with Chat SDK **v4.5.0**
+* Support **voice message** features in Group Channel
+  * Added views
+    * Added `SBUVoiceMessageInputView`
+    * Added `SBUVoiceContentView`
+    * Added voice message features to `SBUMessageInputView`
+      * Added `voiceMessageButton`
+      * Added `showsVoiceMessageButton` 
+  * Added delegates
+    * Added `messageInputViewDidTapVoiceMessage(_:)` to `SBUMessageInputViewDelegate`
+  * Added classes
+    * Added `SBUVoiceRecorder`
+    * Added `SBUVoicePlayer`
+    * Added `SBUVoiceFileInfo`
+  * Added static properties in `SBUGlobals`
+    * Added `SBUVoiceMessageConfiguration` class
+      * Added `isVoiceMessageEnabled` in `SBUVoiceMessageConfiguration`
+      * Added `minRecordingTime` in `SBUVoiceMessageConfiguration/Recorder`
+      * Added `maxRecordingTime` in `SBUVoiceMessageConfiguration/Recorder` 
+    * Added `voiceMessageConfig` in `SBUGlobals`
+    * Added `isAVPlayerAlwaysEnabled` in `SBUGlobals`
+  * Added new strings in `SBUStringSet`
+    * Added `SBUStringSet/VoiceMessage` class
+      * Added `Input` nested string set class in `VoiceMessage` 
+      * Added `Alert` nested string set class in `VoiceMessage` 
+      * Added `Preview` nested string set class in `VoiceMessage` 
+      * Added `fileName` string in `VoiceMessage`
+* Opened `SBUChannelInfoHeaderView`
+* Improved stability
+
+### v3.3.7 (Feb 28, 2023) with Chat SDK **v4.4.0**
+* Opened `popToChannel()` in `SBUBaseSelectUserViewController`
+* Added `UITableView` header interfaces to the list components
+  * Opened `tableView(_:viewForHeaderInSection:)`
+  * Opened `tableView(_:heightForHeaderInSection:)`
+
+### v3.3.6 (Feb 16, 2023)
+* Improved stability
+
+### v3.3.5 (Feb 13, 2023)
+* Modify the channel initialization logic to draw first with cached messages
+
 ### v3.3.4 (Jan 25, 2023)
 * Added web preview image width restriction
 
