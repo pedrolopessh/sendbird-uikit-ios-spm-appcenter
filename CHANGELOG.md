@@ -1,5 +1,57 @@
 # Changelog
 
+### v3.6.2 (Jul 14, 2023) with Chat SDK **v4.9.5**
+* Changed file cache key policy.
+* Improved the issue of exposing empty images when message status updating from pending to succeed.
+* Fixed infinite getChannel request issue when initializing `SBUGroupChannelViewController` with invalid `channelURL`
+* Applied thread message policy for pending or failed state
+* Modified sample rate and bit rate in recorder settings
+    * sample rate: 11025
+    * bit rate: 12000
+* Improved stability
+
+### v3.6.1 (Jun 26, 2023)
+* Improved stability of file cache logic
+
+### v3.6.0 (Jun 22, 2023) with Chat SDK **v4.9.2**
+* Support metatype interfaces in `SBUModuleSet`
+    * Added the new public static properties corresponding to the previous in `SBUModuleSet`
+    * Added the new public static properties corresponding to the previous in each SBU module classes.
+    * Deprecated all of the previous public static properties in `SBUModuleSet`
+    * Deprecated all of the previous public static properties in each SBU module classes.
+    ```swift
+    SBUModuleSet.GroupChannelListModule = CustomModule.self // Metatype Type
+    SBUModuleSet.GroupChannelListModule.HeaderComponent = CustomComponent.self // Metatype Type
+    ```
+* Support **feature configuration**
+    * Added `SBUConfig` class
+    * Added `config` property in `SendbirdUI` class
+    * Added `SBUPrioritizedConfig` propertyWrapper
+    * Applied decoder on `SBUReplyType`, `SBUThreadReplySelectType` enum
+    * Deprecated
+        * `replyType`, `threadReplySelectType` property in `SBUReplyType` class
+        * `init(type:threadReplySelectType:)` method in `SBUReplyType` class
+        * `isVoiceMessageEnabled` property in `SBUVoiceMessageConfiguration` class
+        * `isChannelListTypingIndicatorEnabled` property in `SBUGlobals` class
+        * `isChannelListMessageReceiptStateEnabled` property in `SBUGlobals` class
+        * `isOpenChannelUserProfileEnabled` property in `SBUGlobals` class
+        * `isUserMentionEnabled` property in `SBUGlobals` class
+        * `isVoiceMessageEnabled` property in `SBUGlobals` class
+* Fixed a problem that tintcolor is not applied properly in `SBUEmptyView` class
+* Fixed an issue of changing 'AVAudioSession' before using the player.
+
+### v3.5.9 (Jun 15, 2023) with Chat SDK **v4.9.1**
+* Improved stability 
+
+### v3.5.8 (May 26, 2023) with Chat SDK **v4.8.5**
+* Improved stability 
+
+### v3.5.7 (May 16, 2023) with Chat SDK **v4.8.3**
+* Added `notifications` property in `SBUFontSet.FontFamily` class
+  * This property is for the Notification feature
+* Added statistics for the action of notification
+* Improved stability 
+
 ### v3.5.6 (Apr 26, 2023) with Chat SDK **v4.6.7** 
 * Update iOS deployment target to 11.0 for Xcode 14.1+
 * Modified access level to the public of `SBUChannelTitleView` class and properties.
